@@ -290,7 +290,54 @@ export const REAL_REPOSITORIES: Repository[] = [
 ];
 
 export const TECHNOLOGIES: Technology[] = [
-  // BACKEND
+  // FOUNDATION & LANGUAGES
+  {
+    id: "cpp",
+    name: "C++",
+    category: "FOUNDATION",
+    purpose: "High-performance object-oriented system programming language.",
+    iconName: "Code2",
+    color: "#00599C",
+    badge: "Core Language"
+  },
+  {
+    id: "python",
+    name: "Python",
+    category: "FOUNDATION",
+    purpose: "Scripting, bot logic development, and automation tasks.",
+    iconName: "Terminal",
+    color: "#3776AB",
+    badge: "Scripting & Bot"
+  },
+  {
+    id: "fundamentals",
+    name: "Programming Fundamentals",
+    category: "FOUNDATION",
+    purpose: "Variables, conditions, algorithms, logic structuring, and clean code principles.",
+    iconName: "BookOpen",
+    color: "#10B981",
+    badge: "Foundation"
+  },
+  {
+    id: "oop",
+    name: "OOP",
+    category: "FOUNDATION",
+    purpose: "Object-Oriented Programming (Abstraction, Encapsulation, Inheritance, Polymorphism).",
+    iconName: "Box",
+    color: "#F59E0B",
+    badge: "Architecture"
+  },
+  {
+    id: "dsa",
+    name: "Data Structures & Algorithms",
+    category: "FOUNDATION",
+    purpose: "Efficient data organization, searching, sorting, and algorithmic complexity.",
+    iconName: "Sparkles",
+    color: "#EC4899",
+    badge: "Problem Solving"
+  },
+
+  // BACKEND / .NET
   {
     id: "csharp",
     name: "C#",
@@ -319,6 +366,15 @@ export const TECHNOLOGIES: Technology[] = [
     badge: "Web API"
   },
   {
+    id: "webapi",
+    name: "Web API",
+    category: "BACKEND",
+    purpose: "RESTful HTTP endpoint design, request validation, and JSON controllers.",
+    iconName: "Network",
+    color: "#60A5FA",
+    badge: "REST API"
+  },
+  {
     id: "efcore",
     name: "Entity Framework Core",
     category: "BACKEND",
@@ -328,22 +384,13 @@ export const TECHNOLOGIES: Technology[] = [
     badge: "ORM"
   },
   {
-    id: "restapi",
-    name: "REST API",
+    id: "linq",
+    name: "LINQ",
     category: "BACKEND",
-    purpose: "Designing HTTP endpoints with standard JSON request/response formats.",
-    iconName: "Network",
-    color: "#60A5FA",
-    badge: "API Architecture"
-  },
-  {
-    id: "automapper",
-    name: "AutoMapper",
-    category: "BACKEND",
-    purpose: "Object-to-object mapping between Entities and Data Transfer Objects (DTOs).",
-    iconName: "Shuffle",
+    purpose: "Language Integrated Query for strongly typed data manipulation in C#.",
+    iconName: "Binary",
     color: "#C084FC",
-    badge: "DTO Mapping"
+    badge: "Data Queries"
   },
   {
     id: "jwt",
@@ -353,6 +400,15 @@ export const TECHNOLOGIES: Technology[] = [
     iconName: "Key",
     color: "#F472B6",
     badge: "Security"
+  },
+  {
+    id: "swagger",
+    name: "Swagger / OpenAPI",
+    category: "BACKEND",
+    purpose: "Interactive REST API documentation and client endpoint testing.",
+    iconName: "FileSpreadsheet",
+    color: "#10B981",
+    badge: "API Docs"
   },
 
   // DATABASE
@@ -383,16 +439,25 @@ export const TECHNOLOGIES: Technology[] = [
     color: "#A78BFA",
     badge: "Embedded DB"
   },
+  {
+    id: "sqlserver",
+    name: "SQL Server",
+    category: "DATABASE",
+    purpose: "Microsoft relational database for enterprise application data.",
+    iconName: "Database",
+    color: "#EF4444",
+    badge: "Enterprise DB"
+  },
 
   // FRONTEND
   {
     id: "react",
-    name: "React",
+    name: "React.js",
     category: "FRONTEND",
     purpose: "Building modern interactive component-based user interfaces.",
     iconName: "Atom",
     color: "#61DAFB",
-    badge: "Secondary Focus"
+    badge: "UI Library"
   },
   {
     id: "typescript",
@@ -431,107 +496,33 @@ export const TECHNOLOGIES: Technology[] = [
     badge: "Styling"
   },
 
-  // TOOLS
+  // TOOLS & CLOUD
   {
     id: "git",
-    name: "Git",
+    name: "Git & GitHub",
     category: "TOOLS",
-    purpose: "Distributed version control system for tracking code changes.",
+    purpose: "Distributed version control system and repository hosting.",
     iconName: "GitBranch",
     color: "#F05032",
     badge: "Version Control"
   },
   {
-    id: "github",
-    name: "GitHub",
+    id: "docker",
+    name: "Docker",
     category: "TOOLS",
-    purpose: "Hosting code repositories, tracking issues, and showcasing projects.",
-    iconName: "Github",
-    color: "#FFFFFF",
-    badge: "Code Hosting"
-  },
-  {
-    id: "visualstudio",
-    name: "Visual Studio",
-    category: "TOOLS",
-    purpose: "Full-featured IDE for C# and .NET solution development.",
-    iconName: "Monitor",
-    color: "#C084FC",
-    badge: "C# IDE"
-  },
-  {
-    id: "vscode",
-    name: "VS Code",
-    category: "TOOLS",
-    purpose: "Lightweight code editor for frontend and multi-language scripts.",
-    iconName: "Terminal",
-    color: "#38BDF8",
-    badge: "Code Editor"
-  },
-  {
-    id: "powershell",
-    name: "PowerShell",
-    category: "TOOLS",
-    purpose: "Command-line shell and scripting tool for workflow tasks.",
-    iconName: "TerminalSquare",
-    color: "#5391FE",
-    badge: "CLI"
-  },
-  {
-    id: "swagger",
-    name: "Swagger / Scalar",
-    category: "TOOLS",
-    purpose: "Interactive REST API documentation and endpoint testing UI.",
-    iconName: "FileText",
-    color: "#85EA2D",
-    badge: "API Docs"
-  },
-
-  // ARCHITECTURE
-  {
-    id: "repopattern",
-    name: "Repository Pattern",
-    category: "ARCHITECTURE",
-    purpose: "Decoupling data access logic from business logic for testability.",
+    purpose: "Containerization platform for isolated application deployment.",
     iconName: "Box",
-    color: "#8B5CF6",
-    badge: "Data Access"
+    color: "#38BDF8",
+    badge: "Containerization"
   },
   {
-    id: "servicelayer",
-    name: "Service Layer Pattern",
-    category: "ARCHITECTURE",
-    purpose: "Encapsulating core domain rules and business logic.",
-    iconName: "Workflow",
-    color: "#EC4899",
-    badge: "Business Logic"
-  },
-  {
-    id: "dtopattern",
-    name: "DTO Pattern",
-    category: "ARCHITECTURE",
-    purpose: "Preventing over-posting and separating internal entities from API payloads.",
-    iconName: "ArrowLeftRight",
-    color: "#3B82F6",
-    badge: "Data Transfer"
-  },
-  {
-    id: "di",
-    name: "Dependency Injection",
-    category: "ARCHITECTURE",
-    purpose: "Inversion of control via ASP.NET Core built-in DI container.",
-    iconName: "Zap",
-    color: "#C084FC",
-    badge: "Inversion of Control"
-  },
-  {
-    id: "cleanarch",
-    name: "Layered Architecture Concepts",
-    category: "ARCHITECTURE",
-    purpose: "Organizing backend code into clear, maintainable separation of concerns.",
-    iconName: "Layers3",
-    color: "#F472B6",
-    badge: "Clean Code"
+    id: "azure",
+    name: "Azure",
+    category: "TOOLS",
+    purpose: "Cloud computing services for hosting applications and cloud databases.",
+    iconName: "Cloud",
+    color: "#0089D6",
+    badge: "Cloud Platform"
   }
 ];
 
