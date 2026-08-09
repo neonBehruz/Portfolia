@@ -17,7 +17,7 @@ export interface Repository {
   whatILearned?: string;
 }
 
-export type TechCategory = 'BACKEND' | 'DATABASE' | 'FRONTEND' | 'TOOLS' | 'ARCHITECTURE';
+export type TechCategory = 'FOUNDATION' | 'BACKEND' | 'DATABASE' | 'FRONTEND' | 'TOOLS' | 'ARCHITECTURE';
 
 export interface Technology {
   id: string;
